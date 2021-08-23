@@ -31,9 +31,3 @@ function start() {
     }, (tiles.length - 1) / 4 * 1000 + 1000);
 
 }
-
-function finish() {
-    let button = document.getElementById("startButton");
-
-
-}
