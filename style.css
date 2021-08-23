@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background: #464e51;
+    color: #fff;
 }
 
 .container {
@@ -25,10 +26,20 @@ body {
     margin: 5px 5px;
     text-align: center;
     font-size: 20px;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#consoleData {
+    background: #3895d3;
+    font-size: 20px;
+    flex: 1 0 500px;
+    height: 250px;
+    margin: 5px 5px;
+    padding: 10px 15px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 button {
@@ -37,6 +48,30 @@ button {
     background: #3895d3;
     border: none;
     font-size: 20px;
-    color: #fff;
+    color: inherit;
     margin: 5px auto;
     }
+
+@media screen and (max-width: 599px) {
+    .container {
+        width: 300px;
+    }
+
+    .tile {
+        flex: 1 0 60px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #consoleData {
+        flex: 1 0 270px;
+        height: 250px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 50px;
+        height: 25px;
+        font-size: 16px;
+    }
+}
