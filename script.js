@@ -4,16 +4,16 @@ function start() {
     let button = document.getElementById("startButton");
     let tiles = document.getElementsByClassName("tile");
 
-    console.log("---PROGRESS START---");
+    document.getElementById("consoleData").innerHTML += "---PROGRESS START---<br>";
 
     for (let i = 0; i < tiles.length; i++) {
         setTimeout(function () {
-            console.log(`CELL ${i + 1} Animation START`);
+            document.getElementById("consoleData").innerHTML += `CELL ${i + 1} Animation START<br>`;
             tiles[i].style.transform = "rotateX(180deg)";
             tiles[i].style.transition = "ease-in 1s";
 
         }, i / 4 * 1000);
-        setTimeout(() => console.log(`CELL ${i + 1} Animation END`), i / 4 * 1000 + 1000);
+        setTimeout(() => document.getElementById("consoleData").innerHTML += `CELL ${i + 1} Animation END<br>`, i / 4 * 1000 + 1000);
     }
 
     button.style.width = "130px";
@@ -27,7 +27,7 @@ function start() {
         }
         button.style.width = "100px";
         button.innerHTML = "start";
-        console.log("---PROGRESS END---");
+        document.getElementById("consoleData").innerHTML += "---PROGRESS END---";
     }, (tiles.length - 1) / 4 * 1000 + 1000);
 
 }
